@@ -45,9 +45,9 @@ This model enables the database to support operational airline data such as flig
 
 
 - (How it's useful)
-5. (desc.)
-  - [screenshot]
- 
+5. Query 5 shows the list of flights, airplane type and arrival-destination airports from Delta Airlines with a flight distance of more than 4000 miles.
+  <img width="636" height="307" alt="image" src="https://github.com/user-attachments/assets/36b40d1f-3408-4e1a-8a1c-a4366d48b8ec" />
+
   - (How it's useful)
 6. Query 6 shows the top 5 flights ranked by total profitability, including ticket revenue, baggage fees, and snack sales.
 <img width="704" height="308" alt="image" src="https://github.com/user-attachments/assets/affd8d83-5446-46ae-b7c6-e2c7cd1c6313" />
