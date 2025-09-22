@@ -1,3 +1,6 @@
+CREATE DATABASE br_group3;
+USE br_group3;
+
 -- 1. Airline 
 CREATE TABLE Airline_Info (
     airline_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -221,15 +224,16 @@ SELECT airline_name, plane_type
 FROM Airline_Info
 WHERE passenger_capacity < 200;
 
--- Query 5: What was Delta Airlines most common plane type 
-SELECT airline_name, plane_type, starting_airport, ending_airport, COUNT(flight_id) AS flight_count
+-- Query 5: Delta Airlines' lists of flights, airplane type and arrival-destination airports 
+SELECT airline_name, plane_type, starting_airport, ending_airport, flight_distance, COUNT(flight_id) AS flight_count
 FROM Airline_Info
 JOIN Flight_Info ON Airline_Info.airline_id = Airline_Info.airline_id
-WHERE airline_name = 'Delta Airlines'
-GROUP BY airline_name, plane_type, starting_airport, ending_airport
-ORDER BY flight_count DESC;
+WHERE airline_name = 'Delta Airlines' AND flight_distance > 4000
+GROUP BY airline_name, plane_type, starting_airport, ending_airport, flight_distance
+ORDER BY flight_distance DESC;
 
--- Query 6
+
+-- Query 6: Identify the top 5 most profitable flights
 SELECT Flight_Info.flight_id, airline_name, starting_airport, ending_airport,
 (ticket_price * passenger_amount) + IFNULL(SUM(price * quantity_sold), 0) AS total_revenue
 FROM Flight_Info
@@ -239,12 +243,12 @@ GROUP BY Flight_Info.flight_id, airline_name, starting_airport, ending_airport, 
 ORDER BY total_revenue DESC
 LIMIT 5;
 
--- Query 7
+-- Query 7: List all passengers booked on flight 1
 SELECT passenger_name, passport_number, travel_class
 FROM Passenger_Info
 WHERE flight_id = 1;
 
--- Query 8
+-- Query 8: Find flights where baggage weight is above the average baggage weight accross all flights
 SELECT Flight_Info.flight_id, starting_airport, ending_airport,
 ROUND(SUM(weight), 2) AS total_baggage_weight
 FROM Flight_Info
@@ -257,13 +261,13 @@ FROM Baggage
 GROUP BY flight_id) AS flight_weights)
 ORDER BY total_baggage_weight DESC;
 
--- Query 9
+-- Query 9: Show all snacks priced above $4
 SELECT snack_type, price, flight_id
 FROM Snack
 WHERE price > 4.00
 ORDER BY price DESC;
 
--- Query 10
+-- Query 10: Find passengers who are on flights with above-average ticket prices
 SELECT passenger_name, passport_number, travel_class, flight_id
 FROM Passenger_Info
 WHERE flight_id IN
