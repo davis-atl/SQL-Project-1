@@ -1,7 +1,7 @@
 # MIST4610-SQL-Project1-Group3
 
 ## Team Members:
-- Lizzie Stewart @
+- Lizzie Stewart @lizzie-stewart
 - Davis Williams
 - Bobby Szramel
 - Lauryn Thomas
