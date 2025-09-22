@@ -69,4 +69,4 @@ This model enables the database to support operational airline data such as flig
 
 - (How it's useful)
 ## Database Information:
-- [Image of the template]
+<img width="2150" height="692" alt="image" src="https://github.com/user-attachments/assets/b35f2699-5656-4005-960c-416d48755fe3" />
