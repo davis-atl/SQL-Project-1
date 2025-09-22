@@ -17,8 +17,8 @@ An airline company wants to better understand its operations and financial perfo
 
 ## Queries:
 1. (desc.)
-[screenshot]
-(How it's useful)
+- [screenshot]
+- (How it's useful)
 2. 
 
 3. 
