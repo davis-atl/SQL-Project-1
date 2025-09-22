@@ -41,7 +41,8 @@ This model enables the database to support operational airline data such as flig
 
 - (How it's useful)
 4. Query 4 shows all airlines and aircraft types operating at this airport with seating capacities below 200 passengers.
-  <img width="691" height="340" alt="image" src="https://github.com/user-attachments/assets/1ef0400a-b557-4b9f-b044-0cfd798bfce3" />
+  <img width="824" height="430" alt="image" src="https://github.com/user-attachments/assets/0a705776-b35a-4947-a1c2-ad6bac77acc9" />
+
 
 - (How it's useful)
 5. (desc.)
@@ -53,7 +54,8 @@ This model enables the database to support operational airline data such as flig
 
 - (How it's useful)
 7. Query 7 shows all passengers who are booked on Flight 1, including their relevant details.
-  <img width="628" height="306" alt="image" src="https://github.com/user-attachments/assets/6b63a874-f378-490f-b12d-5a81ee70b850" />
+  <img width="734" height="313" alt="image" src="https://github.com/user-attachments/assets/007fa9bb-ee7a-457a-aa31-7b659aa3830a" />
+
 
 - (How it's useful)
 8. Query 8 shows flights where the total checked baggage weight exceeds the average baggage weight across all flights.
