@@ -198,3 +198,81 @@ VALUES
 ('Carry-On', 7.80, '4', 24, 24),
 ('Checked', 33.00, '5', 25, 25);
 
+-- Query 1: calculate the total number of snack sold and revenue on flights with distance over 900 miles
+SELECT SUM(Snack.quantity_sold) AS total_snk_sold,
+ROUND(SUM(Snack.price * Snack.quantity_sold), 2) AS total_snk_rev
+FROM Flight_Info
+JOIN Snack ON Flight_Info.flight_id = Snack.flight_id
+WHERE Flight_Info.flight_distance > 900;
+
+-- Query 2: What is the average amount of passengers on planes departing from atlanta
+SELECT starting_airport, airline_id, ROUND(AVG(passenger_amount)) AS avg_passengers
+FROM Flight_Info
+WHERE starting_airport = 'ATL'
+GROUP BY airline_id;
+
+-- Query 3: How many first class passengers checked in bags for their flights this month?
+SELECT COUNT(passenger_id) AS FC_Checked
+FROM Baggage
+JOIN Passenger_Info ON Passenger_Info.flight_id = Baggage.flight_id;
+
+-- Query 4: List all airlines and plane types that this airport has that support less than 200 passengers
+SELECT airline_name, plane_type
+FROM Airline_Info
+WHERE passenger_capacity < 200;
+
+-- Query 5: What was Delta Airlines most common plane type 
+SELECT airline_name, plane_type, starting_airport, ending_airport, COUNT(flight_id) AS flight_count
+FROM Airline_Info
+JOIN Flight_Info ON Airline_Info.airline_id = Airline_Info.airline_id
+WHERE airline_name = 'Delta Airlines'
+GROUP BY airline_name, plane_type, starting_airport, ending_airport
+ORDER BY flight_count DESC;
+
+-- Query 6
+SELECT Flight_Info.flight_id, airline_name, starting_airport, ending_airport,
+(ticket_price * passenger_amount) + IFNULL(SUM(price * quantity_sold), 0) AS total_revenue
+FROM Flight_Info
+JOIN Airline_Info ON Flight_Info.airline_id = Airline_Info.airline_id
+JOIN Snack ON Flight_Info.flight_id = Snack.flight_id
+GROUP BY Flight_Info.flight_id, airline_name, starting_airport, ending_airport, ticket_price, passenger_amount
+ORDER BY total_revenue DESC
+LIMIT 5;
+
+-- Query 7
+SELECT passenger_name, passport_number, travel_class
+FROM Passenger_Info
+WHERE flight_id = 1;
+
+-- Query 8
+SELECT Flight_Info.flight_id, starting_airport, ending_airport,
+ROUND(SUM(weight), 2) AS total_baggage_weight
+FROM Flight_Info
+JOIN Baggage ON Flight_Info.flight_id = Baggage.flight_id
+GROUP BY Flight_Info.flight_id, starting_airport, ending_airport
+HAVING SUM(weight) >
+(SELECT AVG(total_weight)
+FROM (SELECT SUM(weight) AS total_weight
+FROM Baggage
+GROUP BY flight_id) AS flight_weights)
+ORDER BY total_baggage_weight DESC;
+
+-- Query 9
+SELECT snack_type, price, flight_id
+FROM Snack
+WHERE price > 4.00
+ORDER BY price DESC;
+
+-- Query 10
+SELECT passenger_name, passport_number, travel_class, flight_id
+FROM Passenger_Info
+WHERE flight_id IN
+(SELECT flight_id
+FROM Flight_Info
+WHERE ticket_price > (SELECT AVG(ticket_price) FROM Flight_Info));
+
+
+
+
+
+
