@@ -14,6 +14,12 @@ The airline company QueryQuest Travel Co. wants to better understand its operati
 <img width="706" height="566" alt="image" src="https://github.com/user-attachments/assets/471bf4a1-c1e8-4201-9cff-e727d09f4c34" />
 
 ## Data Dictionary:
+<img width="865" height="403" alt="image" src="https://github.com/user-attachments/assets/0c498193-39fc-446d-a9d6-2053e556284f" />
+<img width="861" height="596" alt="image" src="https://github.com/user-attachments/assets/8d83961f-325f-4e4a-bd59-eafd2300f1cd" />
+<img width="850" height="393" alt="image" src="https://github.com/user-attachments/assets/00073f6c-1468-42ab-8a3f-436270ba00d8" />
+<img width="853" height="440" alt="image" src="https://github.com/user-attachments/assets/3b3fbf0c-f4ad-49d4-bb2a-fc7ccf6f2610" />
+<img width="854" height="487" alt="image" src="https://github.com/user-attachments/assets/ab738c80-f0b7-4a5d-86b3-f2f68131fdea" />
+
 
 ## Queries:
 1. Query 1 shows the total quantity of snacks sold and the total snack revenue for flights where the flight distance is greater than 900 miles.
