@@ -2,9 +2,9 @@
 
 ## Team Members:
 - Lizzie Stewart @lizzie-stewart
-- Davis Williams
-- Bobby Szramel
-- Lauryn Thomas
+- Davis Williams @davis-atl
+- Bobby Szramel @RSzramel
+- Lauryn Thomas @laurynthomas
 
 ## Context:
 At QueryQuest, we developed an airline database to model the core operations of a commercial carrier. The system captures details about airlines, flights, passengers, baggage, and in-flight sales. The database allows managers to schedule flights, process passenger bookings, manage baggage records, and track onboard purchases.
