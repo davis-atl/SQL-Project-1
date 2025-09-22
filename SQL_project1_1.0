@@ -220,9 +220,10 @@ FROM Baggage
 JOIN Passenger_Info ON Passenger_Info.flight_id = Baggage.flight_id;
 
 -- Query 4: List all airlines and plane types that this airport has that support less than 200 passengers
-SELECT airline_name, plane_type
-FROM Airline_Info
-WHERE passenger_capacity < 200;
+SELECT airline_name, plane_type, passenger_capacity
+FROM Airline_Info 
+WHERE passenger_capacity < 200
+ORDER BY airline_name;
 
 -- Query 5: Delta Airlines' lists of flights, airplane type and arrival-destination airports 
 SELECT airline_name, plane_type, starting_airport, ending_airport, flight_distance, COUNT(flight_id) AS flight_count
@@ -244,9 +245,10 @@ ORDER BY total_revenue DESC
 LIMIT 5;
 
 -- Query 7: List all passengers booked on flight 1
-SELECT passenger_name, passport_number, travel_class
+SELECT COUNT(passport_number), passenger_name, travel_class
 FROM Passenger_Info
-WHERE flight_id = 1;
+WHERE flight_id = 1
+GROUP BY passport_number;
 
 -- Query 8: Find flights where baggage weight is above the average baggage weight accross all flights
 SELECT Flight_Info.flight_id, starting_airport, ending_airport,
