@@ -17,7 +17,7 @@ This data model, designed by QueryQuest, represents an airline database that sup
 
 This model enables the database to support operational airline data such as flight scheduling, passenger bookings, baggage handling, and in-flight sales. It does not extend to other airline functions such as crew assignments, aircraft maintenance, airport logistics, or frequent flyer 
 
-<img width="706" height="566" alt="image" src="https://github.com/user-attachments/assets/471bf4a1-c1e8-4201-9cff-e727d09f4c34" />
+<img width="647" height="550" alt="image" src="https://github.com/user-attachments/assets/808a9e7b-ad2d-4363-b1bb-54420b52fb50" />
 
 ## Data Dictionary:
 <img width="865" height="403" alt="image" src="https://github.com/user-attachments/assets/0c498193-39fc-446d-a9d6-2053e556284f" />
