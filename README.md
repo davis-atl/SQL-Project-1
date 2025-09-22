@@ -7,10 +7,16 @@
 - Lauryn Thomas
 
 ## Context:
-The airline company QueryQuest Travel Co. wants to better understand its operations and financial performance. The CFO needs tools to analyze ticket revenue, baggage fees, and snack sales, while also tracking passenger behavior and travel patterns. By creating a relational database with flight, passenger, baggage, and snack data, the company can generate insights to improve profitability, inventory management, and customer experience.
+At QueryQuest, we developed an airline database to model the core operations of a commercial carrier. The system captures details about airlines, flights, passengers, baggage, and in-flight sales. The database allows managers to schedule flights, process passenger bookings, manage baggage records, and track onboard purchases.
+
+While comprehensive in these areas, the model intentionally excludes operational aspects such as pilot and crew assignments, maintenance records, airport logistics, and customer loyalty programs. This focus ensures the database remains streamlined for analyzing flight efficiency, passenger behavior, and revenue performance. 
+
 
 ## Data Model:
-- (additional context for the data model and how it can be utilized for an Airline company)
+This data model, designed by QueryQuest, represents an airline database that supports the storage and management of flights, passengers, baggage, and in-flight purchases.
+
+This model enables the database to support operational airline data such as flight scheduling, passenger bookings, baggage handling, and in-flight sales. It does not extend to other airline functions such as crew assignments, aircraft maintenance, airport logistics, or frequent flyer 
+
 <img width="706" height="566" alt="image" src="https://github.com/user-attachments/assets/471bf4a1-c1e8-4201-9cff-e727d09f4c34" />
 
 ## Data Dictionary:
