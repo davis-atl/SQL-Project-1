@@ -80,3 +80,7 @@ This query finds passengers traveling on flights with above-average ticket price
 
 ## Database Information:
 <img width="2150" height="692" alt="image" src="https://github.com/user-attachments/assets/b35f2699-5656-4005-960c-416d48755fe3" />
+
+Name of the Database: br_dbw94452
+
+The queries are bookmarked through stored procedures and can be called using the format CALL TP_Qx where "x" is the query number 
